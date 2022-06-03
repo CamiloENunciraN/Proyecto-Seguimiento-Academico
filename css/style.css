@@ -5,6 +5,7 @@
 
 :root {
   --myRojo: rgb(205, 8, 8);
+  --myGris:rgb(202, 212, 211);
 }
 
 body{
@@ -38,10 +39,18 @@ max-height: 1080px;*/
 
 }
 */
-.derecha{
+
+.contenedor_derecha{
   width: 40%;
   background-color: var(--myRojo);
   height: 100%;
+}
+
+
+.derecha{
+  width: 100%;
+  background-color: var(--myRojo);
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +65,7 @@ max-height: 1080px;*/
   align-items: center;
 }
 
-.login{
+#form{
 width: 95%;
 height: 95%;
 background-color: white;
@@ -68,11 +77,25 @@ border: 1px solid;
 border-color: var(--myRojo);
 }
 
-.login input{
+#form input{
   margin: 5px;
   height: 10%;
 }
 
+.vinculos {
+width: 100%;
+background-color: rgb(147, 13, 13);
+height: 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.vinculos a{
+margin: 15px;
+margin-top: 15px;
+color: var(--myGris);
+}
 /*estilos de la pagina principal*/
 .menu{
 background: rgb(232, 19, 16);
