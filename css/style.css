@@ -143,7 +143,7 @@ display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--myRojo);
-  color: white;
+  color:var(--myGris);
 }
 
 .menu_opciones{
@@ -172,35 +172,33 @@ border: none;
 /*columna izquierda*/
 .profile{
   width: 20%;
-  height: 100vh;
-  background-color: pink;
-  border-right: 1px solid rgb(125, 119, 116);
-
 }
 
-.profile_datos{
-
-  width: 100%;
-  height: 200px;
+.profile_menu{
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
-
+  background-color: var(--myGris2);
+  border: 1px solid;
+  border-color: var(--myRojo);
+  margin: 15px;
 }
 
-.profile_datos img{
-  margin-top: 3%;
-  width: 80%;
-  height: 85%;
-  border-radius: 500px;
-}
 
 .profile_materias{
-  background-color: red;
-  width: 100%;
+  background-color: var(--myGris2);
+  width: 90%;
   height: 200px;
   margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid;
+  border-color: var(--myRojo);
 }
 
 .profile_materias h2{
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -209,16 +207,22 @@ border: none;
 .info{
   width: 60%;
   height: 100vh;
-  background-color: blue;
+  background-color: var(--myGris2);
   display: flex;
+  border: 1px solid;
+  border-color: var(--myRojo);
+  margin:15px;
 }
 
 /*columna derecha*/
 .otros{
   width: 20%;
   height: 100vh;
-  background-color: brown;
+  background-color: var(--myGris2);
   display: flex;
+  margin: 15px;
+  border: 1px solid;
+  border-color: var(--myRojo);
 }
 
 
@@ -226,5 +230,20 @@ border: none;
 footer {
   width: 100%;
   height: 40px;
-  background-color: black
+  background-color: var(--myRojo);
+  display: flex;
+  align-items: center;
+  color: var(--myGris);
+  text-decoration: none;
+}
+
+footer a{
+  margin-left: 15px;
+  margin-right: 15px;
+  color: var(--myGris);
+  text-decoration: none;
+}
+
+#creditos{
+  margin-left: 65%;
 }
