@@ -185,8 +185,8 @@ border: none;
   margin: 15px;
 }
 
-
-.profile_materias{
+/*estos son los cuadros de la izquierda*/
+#prof{
   background-color: var(--myGris2);
   width: 90%;
   height: 200px;
@@ -197,7 +197,7 @@ border: none;
   border-color: var(--myRojo);
 }
 
-.profile_materias h2{
+#prof h2{
   margin-top: 10px;
   text-align: center;
 }
@@ -213,6 +213,12 @@ border: none;
   border-color: var(--myRojo);
   margin:15px;
 }
+
+.ifcalendario {
+  width: 100%;
+}
+
+
 
 /*columna derecha*/
 .otros{
