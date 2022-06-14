@@ -10,11 +10,7 @@
   --myGris2:rgb(234, 238, 238);
 }
 
-body{
-/*max-width: 1920px;
-max-height: 1080px;*/
 
-}
 
 .contenedor{
   background-color: green;
@@ -51,7 +47,6 @@ max-height: 1080px;*/
 
 .derecha{
   width: 100%;
-  background-color: var(--myRojo);
   height: 95%;
   display: flex;
   justify-content: center;
@@ -59,8 +54,8 @@ max-height: 1080px;*/
 }
 
 .derecha_caja{
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 300px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -112,7 +107,14 @@ align-items: center;
 margin: 15px;
 margin-top: 15px;
 color: var(--myGris);
+text-decoration: none;
 }
+
+.vinculos a:hover{
+text-decoration: underline;
+}
+
+
 /*estilos de la pagina principal*/
 .menu{
 
@@ -250,6 +252,33 @@ footer a{
   text-decoration: none;
 }
 
+.link a:hover{
+  margin-left: 15px;
+  margin-right: 15px;
+  color: var(--myGris);
+  text-decoration: underline;
+}
+
+
 #creditos{
   margin-left: 65%;
+}
+
+
+
+/*responsive*/
+
+@media (max-width: 1000px)  {
+  .izquierda{
+    display: none;
+
+  }
+  .contenedor_derecha{
+    width: 100%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Ufps_C%C3%BAcuta_abril_2021.jpg");
+    background-size: cover;    /*ajusta la imiagen al tamano del div*/
+
+  }
+
+
 }
