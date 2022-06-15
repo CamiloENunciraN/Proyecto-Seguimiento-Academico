@@ -177,14 +177,14 @@ border: none;
 }
 
 .profile_menu{
+  background-color: var(--myGris2);
   width: 90%;
   margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-  background-color: var(--myGris2);
+  margin-left: 5%;
+  margin-right: 5%;
   border: 1px solid;
   border-color: var(--myRojo);
-  margin: 15px;
+  text-align: center;
 }
 
 /*estos son los cuadros de la izquierda*/
@@ -280,5 +280,46 @@ footer a{
 
   }
 
+/*zona dasboard responsive*/
+.pagina{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.profile{
+  width: 90%;
+
+}
+.profile_menu{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#prof{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.info{
+  width: 90%;
+
+}
+
+
+.otros{
+  width: 90%;
+
+}
+
+
+
+#creditos{
+  margin-left: auto;
+}
 
 }
