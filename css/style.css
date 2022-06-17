@@ -174,17 +174,25 @@ display: flex;
 
 .menu_opciones{
   width: 20%;
-  background-color: var(--myRojo);
+  text-align: center;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background-color: var(--myRojo);
+  color:var(--myGris);
 }
 
-.Opciones{
-height: 70%;
-color: white;
-background-color: var(--myRojo);
-border: none;
+.menu_opciones a{
+margin :10px;
+}
+
+#enlace{
+  cursor: pointer;
+
+}
+#enlace a:hover{
+  cursor: pointer;
+  color: red;
 }
 
 /*estilos zona principal*/
@@ -198,7 +206,7 @@ border: none;
 /*columna izquierda*/
 #profile{
   width: 20%;
-  
+
 }
 
 .profile_menu{
@@ -249,14 +257,26 @@ border: none;
   width: 90%;
   background-color: var(--myGris2);
   display: flex;
+  flex-direction: column;
   margin: 15px;
   border: 1px solid;
   border-color: var(--myRojo);
+  text-align: center;
 }
 
 .otros img{
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid var(--myRojo);
+}
+
+.otros a{
+  cursor: pointer;
+}
+
+.otros a:hover{
+  color: red;
+  cursor: pointer;
 }
 
 footer {
@@ -294,6 +314,7 @@ footer a{
 #menu li{ line-height:180%;}
 #menu li:hover{
   color: red;
+
 }
 #menu li a{color:#222; text-decoration:none;  cursor: pointer;}
 
@@ -306,6 +327,7 @@ footer a{
 
 #menu li a:hover{
   color: red;
+
 }
 
 
