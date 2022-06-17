@@ -83,6 +83,30 @@ border-color: var(--myRojo);
   height: 10%;
 }
 
+#formularios_d{
+  width: 90%;
+  margin: 5%;
+
+}
+
+#form2{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#form2 input{
+  margin-top: 5px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+#form2 a{
+  margin-top: 5px;
+
+}
+
 /*fomato de botones*/
 input[type=button] {
   background-color: var(--myRojo2);
@@ -172,8 +196,9 @@ border: none;
 }
 
 /*columna izquierda*/
-.profile{
+#profile{
   width: 20%;
+  
 }
 
 .profile_menu{
@@ -187,28 +212,23 @@ border: none;
   text-align: center;
 }
 
-/*estos son los cuadros de la izquierda*/
-#prof{
+/*estas son las opciones de la lista*/
+
+.profile_menu_lista{
   background-color: var(--myGris2);
   width: 90%;
-  height: 200px;
-  margin-top: 3%;
+  margin-top: 15px;
   margin-left: 5%;
   margin-right: 5%;
   border: 1px solid;
   border-color: var(--myRojo);
-}
 
-#prof h2{
-  margin-top: 10px;
-  text-align: center;
 }
-
 
 /*columna central*/
 .info{
   width: 60%;
-  height: 100vh;
+  height: 90vh;
   background-color: var(--myGris2);
   display: flex;
   border: 1px solid;
@@ -216,16 +236,17 @@ border: none;
   margin:15px;
 }
 
-.ifcalendario {
+#ifram {
   width: 100%;
+  margin:15px;
+  border-style: none;
 }
 
 
 
 /*columna derecha*/
 .otros{
-  width: 20%;
-  height: 100vh;
+  width: 90%;
   background-color: var(--myGris2);
   display: flex;
   margin: 15px;
@@ -233,7 +254,10 @@ border: none;
   border-color: var(--myRojo);
 }
 
-
+.otros img{
+  width: 100%;
+  height: 100%;
+}
 
 footer {
   width: 100%;
@@ -263,6 +287,39 @@ footer a{
 #creditos{
   margin-left: 65%;
 }
+
+
+/*lista desplegable estilos*/
+#menu * { list-style:none;}
+#menu li{ line-height:180%;}
+#menu li:hover{
+  color: red;
+}
+#menu li a{color:#222; text-decoration:none;  cursor: pointer;}
+
+#menu li a:before{ /*para sub listas*/
+  content:"\002d";  /*circulo negro usando mapa de caracteres*/
+  color:#red;
+  margin-left: 20px;
+
+}
+
+#menu li a:hover{
+  color: red;
+}
+
+
+#menu input[name="list"] {
+	position: absolute;
+	left: -1000em;
+	}
+#menu label:before{ content:"\025b8"; margin-right:4px;}
+#menu input:checked ~ label:before{ content:"\025be";}
+#menu .interior{display: none;}
+#menu input:checked ~ ul{display:block;}
+
+
+
 
 
 
@@ -306,7 +363,7 @@ align-items: center;
 }
 
 .info{
-  width: 90%;
+  width: 100%;
 
 }
 
@@ -321,5 +378,8 @@ align-items: center;
 #creditos{
   margin-left: auto;
 }
+
+
+
 
 }

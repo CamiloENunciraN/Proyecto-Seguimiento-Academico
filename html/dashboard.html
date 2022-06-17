@@ -12,7 +12,7 @@
           <img src="C:\Users\CamiloN\Desktop\Proyecto-Seguimiento-Academico\img\logo_ufps.png" alt="">
       </div>
       <div class="menu_titulo">
-        <h1>PLATAFORMA DE ACOMPAÑAMIENTO ACADEMICO</h1>
+        <h1 id="plata">PLATAFORMA DE ACOMPAÑAMIENTO ACADEMICO</h1>
       </div>
       <div class="menu_opciones">
         <select name="select" class="Opciones">
@@ -25,41 +25,82 @@
 <div class="pagina">
 
 
-    <section class="profile">
+    <section id="profile">
       <div class="profile_menu">
         <h1>Menu</h1>
       </div>
 
-      <div class="profile_materias" id="prof">
-        <ul><h2>Materias Matriculadas</h2>
-          <li>materia 1</li>
-          <li>materia 2</li>
-          <li>materia 3</li>
-          <li>materia 4</li>
-          <li>materia 5</li>
-        </ul>
-      </div>
+      <div class="profile_menu_lista">
+      <ul id="menu">
+         <li><input type="checkbox" name="list" id="materia"><label for="materia">Materia</label>
+         <ul class="interior">
+               <li><a  id="cargarRegistrarMateria" onclick="cargarRegistrarMateria()">Registrar</a></li>
+               <li><a href="#r">Modificar</a></li>
+               <li><a href="#r">Eliminar</a></li>
+               <li><a href="#r">Matricular</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="actividad"><label for="actividad">Actividad</label>
+         <ul class="interior">
+               <li><a href="#r">Crear</a></li>
+               <li><a href="#r">Modificar</a></li>
+               <li><a href="#r">Eliminar</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="grupo"><label for="grupo">Grupo</label>
+         <ul class="interior">
+              <li><a href="#r">Crear</a></li>
+              <li><a href="#r">Modificar</a></li>
+              <li><a href="#r">Eliminar</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="estudiante"><label for="estudiante">Estudiante</label>
+         <ul class="interior">
+               <li><a href="#r">Modificar</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="docente"><label for="docente">Docente</label>
+         <ul class="interior">
+               <li><a href="#r">Registrar</a></li>
+               <li><a href="#r">Modificar</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="subActividad"><label for="subActividad">Sub Actividad</label>
+         <ul class="interior">
+               <li><a href="#r">Crear</a></li>
+               <li><a href="#r">Modificar</a></li>
+               <li><a href="#r">Cancelar</a></li>
+            </ul>
+         </li>
+         <li><input type="checkbox" name="list" id="informe"><label for="informe">Informe</label>
+         <ul class="interior">
+               <li><a href="#r">Materia</a></li>
+               <li><a href="#r">Actividad</a></li>
+               <li><a href="#r">Grupo</a></li>
+               <li><a href="#r">Sub Actividad</a></li>
+            </ul>
+         </li>
+      </ul>
 
-      <div class="profile_grupos" id="prof">
-        <ul><h2>Grupos Matriculados</h2>
-          <li>materia 1</li>
-          <li>materia 2</li>
-          <li>materia 3</li>
-          <li>materia 4</li>
-          <li>materia 5</li>
-        </ul>
       </div>
-
 
     </section>
 
     <section class="info">
-        <iframe src="calendario.html" class="ifcalendario"></iframe>
-    </section>
 
-    <section class="otros">
+          <iframe src="calendario.html" id="ifram"></iframe>
 
     </section>
+
+
+<section id="profile">
+    <div class="otros">
+        <img src="https://ingsistemas.cloud.ufps.edu.co/rsc/Sistema%20Documental/fondoescritorio.jpg" >
+    </div>
+</section>
+
+
+
 </div>
 
   </body>
@@ -74,5 +115,7 @@
       <a id="creditos" >Cucuta 2022 ®</a>
 
   </footer>
+
+<script type="text/javascript" src="../js/dashboard.js"></script>
 
 </html>
