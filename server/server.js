@@ -1,53 +1,28 @@
-/*aqui se encuentra el servidor */
-
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer(webServer);
+//servidor creado usando express para agilidad de desarrollo
+//importar libreria
+import express from "express";
 
 
-function webServer(req, res) {
-
-  if (req.method == 'GET') {
-
-    if (req.url == '/') {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'application/json');
-      res.end('Hello World');
-    }else {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'application/json');
-      res.end('no');
-    }
-
-  }
-
-  if (req.method == 'POST') {
-
-    switch (req.url) {
-        case "/crearMateria":
-            res.writeHead(200);
-            res.end(books);
-            break
-        case "/modificarMateria":
-            res.writeHead(200);
-            res.end(authors);
-            break
-
-    }
-
-
-  }
-
-
-}
+const PORT=3000;
+//creacion del servidor
+const expressApp= express();
+expressApp.use(express.json());
+//funcion para recibir ENDPOINT
+expressApp.get('/', (req, res) => {
+  res.send('Server Running');
+  console.log('Server Running');
+})
 
 
 
 
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+//funcion que escucha las peticiones
+expressApp.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`)
+})
+
+
+
+
