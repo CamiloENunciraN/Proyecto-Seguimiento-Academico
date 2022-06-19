@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+<div id="formularios_d">
+    <div class="Modificar" id="form2">
+      <h1 id="titulo_inicio">Modificar Actividad</h1>
+      <a>Materia:</a>
+      <select name="materia" id="materia">
+      </select>
+      <a>Actividad:</a>
+      <select name="actividad" id="actividad">
+      </select>
+      <a>Nombre:</a>
+      <input type="text" name="nombre" value="" >
+      <a>Descripcion:</a>
+      <textarea id="descripcion" name="descripcion" rows="3" cols="20" maxlength="300"></textarea>
+      <a>Detalles:</a>
+      <textarea id="detalles" name="detalles" rows="3" cols="50" maxlength="300"></textarea>
+      <a>Fecha:(DD/MM/AAAA)</a>
+      <input type="text" name="fecha" value="" >
+
+      <a>Hora:</a>
+      <select name="hora" id="hora">
+      </select>
+
+      <input type="button" name="modificar" value="Modificar" id="modificar" onclick="modificarActividad()">
+
+    </div>
+</div>
+
+  </body>
+
+  <script type="text/javascript" src="../js/formModificarActividad.js">
+
+  </script>
+</html>

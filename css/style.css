@@ -102,9 +102,23 @@ border-color: var(--myRojo);
   height: 30px;
 }
 
+#form2 select{
+  margin-top: 5px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
+}
+
 #form2 a{
   margin-top: 5px;
 
+}
+
+#form2 input[type=button]{
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
 }
 
 /*fomato de botones*/
