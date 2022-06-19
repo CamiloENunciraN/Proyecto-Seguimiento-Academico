@@ -121,6 +121,38 @@ border-color: var(--myRojo);
   height: 30px;
 }
 
+#form3{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#form3 input{
+  margin-top: 5px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+#form3 select{
+  margin-top: 5px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+#form3 a{
+  margin-top: 5px;
+
+}
+
+#form3 input[type=button]{
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 10px;
+  height: 30px;
+}
+
 /*fomato de botones*/
 input[type=button] {
   background-color: var(--myRojo2);

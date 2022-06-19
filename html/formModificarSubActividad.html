@@ -7,10 +7,16 @@
   <body>
 
 <div id="formularios_d">
-    <div class="Crear" id="form2">
-      <h1 id="titulo_inicio">Crear Actividad</h1>
+    <div class="Modificar" id="form2">
+      <h1 id="titulo_inicio">Modificar Sub Actividad</h1>
       <a>Materia:</a>
       <select name="materia" id="materia">
+      </select>
+      <a>Actividad:</a>
+      <select name="actividad" id="actividad">
+      </select>
+      <a>Sub Actividad:</a>
+      <select name="subActividad" id="subActividad">
       </select>
       <a>Nombre:</a>
       <input type="text" name="nombre" value="" >
@@ -20,19 +26,22 @@
       <textarea id="detalles" name="detalles" rows="3" cols="50" maxlength="300"></textarea>
       <a>Fecha:(DD/MM/AAAA)</a>
       <input type="text" name="fecha" value="" >
-
       <a>Hora:</a>
       <select name="hora" id="hora">
       </select>
-
-      <input type="button" name="crear" value="Crear" id="crear" onclick="crearActividad()">
+      <a>Estado:</a>
+      <select name="estado">
+        <option value="activa">Activa</option>
+        <option value="inactiva">Inactiva</option>
+      </select>
+      <input type="button" name="modificar" value="Modificar" id="modificar" onclick="modificarSubActividad()">
 
     </div>
 </div>
 
   </body>
 
-  <script type="text/javascript" src="../js/formCrearActividad.js">
+  <script type="text/javascript" src="../js/formModificarSubActividad.js">
 
   </script>
 </html>

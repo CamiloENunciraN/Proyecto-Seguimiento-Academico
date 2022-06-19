@@ -1,8 +1,8 @@
 
+function cargarFrame(direccion) {
 
-function cargarRegistrarMateria() {
  let f=document.getElementById("ifram");
- f.src="formRegistrarMateria.html";
+ f.src=direccion;
 }
 
 

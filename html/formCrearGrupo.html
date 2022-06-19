@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+<div id="formularios_d">
+    <div class="crear" id="form2">
+      <h1 id="titulo_inicio">Crear Grupo</h1>
+      <a>Materia:</a>
+      <select name="materia" id="materia">
+      </select>
+      <a>Actividad:</a>
+      <select name="actividad" id="actividad">
+      </select>
+      <a>Nombre Grupo:</a>
+      <input type="text" name="nombreGrupo" value="" >
+      <a>Estado:</a>
+      <select name="estado">
+        <option value="activa">Activa</option>
+        <option value="inactiva">Inactiva</option>
+      </select>
+      <a>Nombre Integrante 1:</a>
+      <input type="text" name="nombreIntegrante1" value="" >
+      
+
+    </div>
+
+    <div id="form3">
+      <a onclick="agregarIntegrante()">Agregar otro integrante</a>
+      <input type="button" name="crear" value="Crear" id="crear" onclick="crearGrupo()">
+    </div>
+
+</div>
+
+  </body>
+
+  <script type="text/javascript" src="../js/formCrearGrupo.js">
+
+  </script>
+</html>
