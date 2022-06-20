@@ -1,7 +1,7 @@
 //servidor creado usando express para agilidad de desarrollo
 //importar libreria
 import express from "express";
-
+var mysql=  require('mysql');
 
 const PORT=3000;
 //creacion del servidor
@@ -33,3 +33,39 @@ expressApp.listen(PORT, () => {
 
 
 
+//funcion conectar y enviar peticion(query)
+function usarBaseDatos(consulta){
+  var conexion= mysql.createConnection({
+  host: 'localhost',
+  database:'BD_Acompañamiento_Ac',
+  user:'root',
+  password:''
+  });
+
+//inicializa la conexion y envia un mensaje de estado
+conexion.connect(function(error){
+  if (error) {
+    throw error;
+  }else{
+    console.log('conexion exitosa');
+  }
+});
+//realiza la consulta a la bd
+conexion.query(consulta,function(error,results,fields){
+
+  if (error) 
+    throw error;
+
+//return results;
+
+//muestra los resultados en consola
+results.forEach(result=>{
+  console.log(result);
+});
+
+});
+
+//finaliza la conexion a bd
+conexion.end();
+
+}
