@@ -1,12 +1,24 @@
 //servidor creado usando express para agilidad de desarrollo
 //importar libreria
 import express from "express";
-var mysql=  require('mysql');
+import mysql from "mysql";
 
+const mysqlApp=  mysql;
+
+
+//puerto usado para el servidor htttp en node js
 const PORT=3000;
 //creacion del servidor
 const expressApp= express();
 expressApp.use(express.json());
+
+
+//funcion que escucha las peticiones
+expressApp.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`)
+})
+
+/************************************************************************************/
 //funcion para recibir ENDPOINT
 expressApp.get('/', (req, res) => {
   res.send('<h1>Server Running...</h1><img src="https://uploads.twitchalerts.com/000/186/053/978/AW419432_04.gif">');
@@ -22,22 +34,20 @@ console.log('Recibido:'+req.method);
   console.log('respuesta:  ' );
 })
 
+/**************************************************************************************/
 
 
 
-//funcion que escucha las peticiones
-expressApp.listen(PORT, () => {
-  console.log(`Server listening on port: ${PORT}`)
-})
-
-
+//usarBaseDatos('SELECT  *  FROM administrador ');
+usarBaseDatos("Insert",'INSERT INTO administrador  (Codigo,Nombre) values ("1","camilo")');
 
 
 //funcion conectar y enviar peticion(query)
-function usarBaseDatos(consulta){
-  var conexion= mysql.createConnection({
+//tipo="Insert","Select","Update","Delete"
+function usarBaseDatos(tipo,consulta){
+  var conexion= mysqlApp.createConnection({
   host: 'localhost',
-  database:'BD_Acompañamiento_Ac',
+  database:'acompanamiento_academico',
   user:'root',
   password:''
   });
@@ -47,25 +57,42 @@ conexion.connect(function(error){
   if (error) {
     throw error;
   }else{
-    console.log('conexion exitosa');
+    console.log('conexion a base de datos exitosa');
   }
 });
-//realiza la consulta a la bd
+//realiza la consulta SELECT a la bd///////////////
 conexion.query(consulta,function(error,results,fields){
 
   if (error) 
     throw error;
 
-//return results;
-
 //muestra los resultados en consola
-results.forEach(result=>{
-  console.log(result);
-});
+if(tipo=="Select"){
+
+  results.forEach(result=>{
+    console.log(result);
+  });
+
+}else if(tipo=="Insert"){
+
+  console.log("Insercion realizada",results);
+
+}else if(tipo=="Update"){
+  
+  console.log("Actualizacion realizada",results);
+
+}else if(tipo=="Delete"){
+
+  console.log("Eliminacion realizada",results);
+  
+}
+
 
 });
-
 //finaliza la conexion a bd
 conexion.end();
 
 }
+
+
+
