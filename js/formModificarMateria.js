@@ -15,3 +15,12 @@ function llenarHoras(){
 		c.options[i+1]= new Option(i);
 	}
 }
+
+
+function modificarMateria(){
+
+let nombre=document.getElementById("materia");
+alert("Materia "+nombre.value+" Modificada con exito");
+
+window.location.href= "../dashboard.html";
+}

@@ -7,3 +7,14 @@ c.innerHTML+=nuevoIntegrante;
 cont++;
 
 }
+
+
+
+
+function crearGrupo(){
+
+let nombre=document.getElementById("nombreGrupo");
+alert("Grupo "+nombre.value+" Creado con exito");
+
+window.location.href= "../dashboard.html";
+}

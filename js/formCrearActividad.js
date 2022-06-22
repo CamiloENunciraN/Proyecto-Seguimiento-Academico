@@ -10,3 +10,12 @@ function llenarHoras(){
 		c.options[i+1]= new Option(i);
 	}
 }
+
+
+function crearActividad(){
+
+let nombre=document.getElementById("actividad");
+alert("Actividad "+nombre.value+" Creada con exito");
+
+window.location.href= "../dashboard.html";
+}

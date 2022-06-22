@@ -3,8 +3,13 @@ llenarHoras();
 
 
 
-function registrarMateria() {
-alert("test");
+
+function registrarMateria(){
+
+let nombre=document.getElementById("nombre");
+alert("Materia "+nombre.value+" Reistrada con exito");
+
+window.location.href= "../dashboard.html";
 }
 
 
@@ -15,3 +20,4 @@ function llenarHoras(){
 		c.options[i+1]= new Option(i);
 	}
 }
+

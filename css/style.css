@@ -10,7 +10,14 @@
   --myGris2:rgb(234, 238, 238);
 }
 
+#plataforma  {
 
+  text-align: center;
+  height: 10%;
+  margin-top: 10%;
+  color: var(--myGris);
+  text-shadow: 2px 2px 2px #000;
+}
 
 .contenedor{
   background-color: green;
@@ -28,15 +35,7 @@
   justify-content: center;          /*central    horizontalmente*/
   align-items: center;              /*central    verticalmente*/
 }
-/*
-.texto{
-  width: 40%;
-  height: 40%;
-  background-color: yellow;
-  text-align: center;
 
-}
-*/
 
 .contenedor_derecha{
   width: 40%;
@@ -47,7 +46,7 @@
 
 .derecha{
   width: 100%;
-  height: 95%;
+  height: 76%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,6 +403,20 @@ footer a{
     background-size: cover;    /*ajusta la imiagen al tamano del div*/
 
   }
+
+#plataforma  {
+
+  color: #000;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+
+.derecha{
+
+  height: 68%;
+
+}
+
 
 /*zona dasboard responsive*/
 .pagina{

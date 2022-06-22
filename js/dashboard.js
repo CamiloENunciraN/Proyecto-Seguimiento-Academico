@@ -1,6 +1,8 @@
 
 
-sessionStorage.setItem("tipo","estudiante");
+document.getElementById("nombre_usuario").textContent=sessionStorage.getItem("nombre");
+
+
 cargarMenus();
 
 
@@ -27,7 +29,7 @@ function cerrarSesion() {
 function  cargarMenus(){
 
 let t=sessionStorage.getItem('tipo');
-console.log(t);
+//console.log(t);
 if (t=="administrador") {
 
 document.getElementById("formMatricularMateria").style.display="none";

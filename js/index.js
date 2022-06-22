@@ -18,8 +18,15 @@ if(correo==""){
 }else if(contra==""){
   alert("ingrese contraseña");
 }else{
-// envio de la informacion
 
+sessionStorage.setItem("correo",correo);
+sessionStorage.setItem("tipo","administrador");
+sessionStorage.setItem("nombre","camilo");
+
+
+window.location.href="html/dashboard.html";
+// envio de la informacion
+/*
 var url = 'http://localhost:3000/entrar';
 var data = {correo: correo,
             contrasena: contra};
@@ -36,7 +43,7 @@ fetch(url, {
 .then(response => response.json())
 .then(response => {
   console.log(response.message);
-})
+})*/
 /*
 .then(response => response.json()) 
 .then(json => console.log(json))

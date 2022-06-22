@@ -6,9 +6,10 @@ window.location.href= "../index.html";
 
 
 
-document.getElementById("registrar").onclick = function(){
+function registrarse(){
 
+let nombre=document.getElementById("nombre");
+alert("Usuario "+nombre.value+" Registrado con exito");
 
-  alert("respuesta");
-//window.location.href= "../index.html";
+window.location.href= "../index.html";
 }
